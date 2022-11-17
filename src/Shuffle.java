@@ -15,7 +15,7 @@ public class Shuffle {
     static int quit = 0, turn = 1;
             static int maxDispatch = dispatch.size() ;
 
-    static Object[] options2 = {"Deck", "dispatch.get(maxDispatch)", "quit"};
+    static Object[] options2 = {"Deck", "dispatch.get(maxDispatch-1)", "quit"};
     public static void main(String[] args){
 
         cards();
@@ -132,7 +132,7 @@ public class Shuffle {
 
 
     public static void playerTurn(){
-        JOptionPane.showMessageDialog(null,"Your hand is: "+pHand, "Knock 31",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Turn"+ turn+"\nYour hand is: "+pHand, "Knock 31",JOptionPane.INFORMATION_MESSAGE);
 
 
 
@@ -185,7 +185,7 @@ public class Shuffle {
 
 
 
-             if(turn >1){
+             else if(turn >1){
 
                 int answer2 = JOptionPane.showOptionDialog(null, "Draw from the deck(random card) or top of dispatch pile("+ dispatch.get(maxDispatch)+")",
                         "Knock 31", JOptionPane.YES_NO_CANCEL_OPTION,
@@ -235,7 +235,8 @@ public class Shuffle {
         }// Extra card is selected
 
         if(answer== 1){
-            JOptionPane.showMessageDialog(null,"Your hand is: "+pHand, "Knock 31",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"You Selected Knock", "Knock 31",JOptionPane.INFORMATION_MESSAGE);
+            quit++;//Placeholder for validation
 
         }//Knock is selected
 
