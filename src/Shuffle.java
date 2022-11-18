@@ -15,7 +15,7 @@ public class Shuffle {
     static int quit = 0, turn = 1;
             static int maxDispatch = dispatch.size() ;
 
-    static Object[] options2 = {"Deck", "dispatch.get(maxDispatch-1)", "quit"};
+    static Object[] options2 = {"Deck", "Dispatch", "quit"};
     public static void main(String[] args){
 
         cards();
@@ -25,6 +25,7 @@ public class Shuffle {
         do {
 
             mainGame();
+            System.out.print(dispatch+ "\n");
 
         } while (quit<1);
 
@@ -181,13 +182,13 @@ public class Shuffle {
 
                 turn++;
 
-            }
+            }// First turn no dispatch pile available
 
 
 
-             else if(turn >1){
+             else {
 
-                int answer2 = JOptionPane.showOptionDialog(null, "Draw from the deck(random card) or top of dispatch pile("+ dispatch.get(maxDispatch)+")",
+                int answer2 = JOptionPane.showOptionDialog(null, "Draw from the deck(random card) or top of dispatch pile("+ Collections.max(dispatch)+")",
                         "Knock 31", JOptionPane.YES_NO_CANCEL_OPTION,
                         JOptionPane.PLAIN_MESSAGE, null, options2, null);
 
@@ -225,7 +226,37 @@ public class Shuffle {
                 }//Deck is Selected
 
 
-                if(answer2 == 1){}//Dispatch is selected
+                if(answer2 == 1){
+                    pHand.add(Collections.max(dispatch));//Adds to players hand
+                    dispatch.remove(Collections.max(dispatch));//Removes selected card from available cards
+
+                    int ditchCard = JOptionPane.showOptionDialog(null, "Please Select a card to get rid of","knock 31",
+                            JOptionPane.YES_NO_CANCEL_OPTION,
+                            JOptionPane.PLAIN_MESSAGE,
+                            null,
+                            pHand.toArray(new String[0]), null);
+
+                    if(ditchCard== 0){
+                        dispatch.add(pHand.get(0));
+                        pHand.remove(0);
+                    }
+
+                    if(ditchCard== 1){
+                        dispatch.add(pHand.get(1));
+                        pHand.remove(1);
+                    }
+
+                    if(ditchCard== 2){
+                        dispatch.add(pHand.get(2));
+                        pHand.remove(2);
+                    }
+
+                    if(ditchCard== 3){
+                        dispatch.add(pHand.get(3));
+                        pHand.remove(3);
+                    }
+
+                }//Dispatch is selected
 
                  turn++;
             }
@@ -252,41 +283,67 @@ public class Shuffle {
 
 
 
-        int answer  = (int)(Math.random() * 1);
+        int answer  = (int)(Math.random() * 2);
 
-        if(answer== 0){
+        if(answer== 1){
             computerHand();
 
 
 
-            int ditchCard = (int)(Math.random() * 3);
+            int ditchCard = (int)(Math.random() * 4);
 
-            if(ditchCard== 0){
+            if(ditchCard== 1){
                 dispatch.add(cHand.get(0));
                 cHand.remove(0);
             }
 
-            if(ditchCard== 1){
+            if(ditchCard== 2){
                 dispatch.add(cHand.get(1));
                 cHand.remove(1);
             }
 
-            if(ditchCard== 2){
+            if(ditchCard== 3){
                 dispatch.add(cHand.get(2));
                 cHand.remove(2);
             }
 
-            if(ditchCard== 3){
+            if(ditchCard== 4){
                 dispatch.add(cHand.get(3));
                 cHand.remove(3);
             }
 
-        }// Extra card is drawn and a random card is tossed
+        }// Extra card is drawn from deck and a random card is tossed
 
-        if(answer== 1){
+        if(answer== 2){
+
+            cHand.add(Collections.max(dispatch));//Adds to players hand
+            dispatch.remove(Collections.max(dispatch));//Removes selected card from available cards
 
 
-        }//No extra card is selected
+            int ditchCard = (int)(Math.random() * 4);
+
+            if(ditchCard== 1){
+                dispatch.add(cHand.get(0));
+                cHand.remove(0);
+            }
+
+            if(ditchCard== 2){
+                dispatch.add(cHand.get(1));
+                cHand.remove(1);
+            }
+
+            if(ditchCard== 3){
+                dispatch.add(cHand.get(2));
+                cHand.remove(2);
+            }
+
+            if(ditchCard== 4){
+                dispatch.add(cHand.get(3));
+                cHand.remove(3);
+            }
+
+        }//Extra card is drawn from dipatch
+
 
 
 
