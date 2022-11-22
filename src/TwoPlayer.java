@@ -37,13 +37,13 @@ public class TwoPlayer {
         player2Validation();
 
         if(p1Total> p2Total)
-            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"Player Twos Total: "+p2Total+"\nPlayer One Wins");
+            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"\nPlayer Twos Total: "+p2Total+"\nPlayer One Wins");
 
         if(p1Total< p2Total)
-            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"Player Twos Total: "+p2Total+"\nPlayer Two Wins");
+            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"\nPlayer Twos Total: "+p2Total+"\nPlayer Two Wins");
 
         if(p1Total== p2Total)
-            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"Player Twos Total: "+p2Total+"\n Its a draw");
+            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"\nPlayer Twos Total: "+p2Total+"\n Its a draw");
 
     }
 
