@@ -1,3 +1,5 @@
+package Knock_31;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -5,28 +7,31 @@ import java.util.Random;
 
 public class TwoPlayer {
 
-    static List<String> deck = new ArrayList<>();//Cards of the deck
+     static List<String> deck = new ArrayList<>();//Cards of the deck
     static List<String> p1Hand = new ArrayList<>();//player hand
     static List<String> p2Hand = new ArrayList<>();//computer hand
     static List <String> dispatch =new ArrayList<>();//Any cards that aren't in use
 
     static List<Integer> player1scores = new ArrayList<>();
-    static List<Integer> player1suitscores = new ArrayList<>();
+    static  List<Integer> player1suitscores = new ArrayList<>();
 
     static List<Integer> player2scores = new ArrayList<>();
-    static List<Integer> player2suitscores = new ArrayList<>();
+    static  List<Integer> player2suitscores = new ArrayList<>();
     static Object[] options1 = {"Draw", "Knock", "Quit"};//Options Menu options
-    static Object[] options2 = {"Deck", "Dispatch"};
+    static  Object[] options2 = {"Deck", "Dispatch"};
     static int resign = 0, p1turn = 1, p2Turn=1, p1Total=0, p2Total=0;
 
+    static String result = " ";
+    public static void main(String[] args) {
 
 
-    public static void main(String []args){
+
+
         cards();
         player1HandStart();
         player2HandStart();
 
-        dispatch.add("Start");
+
 
         do {
             mainGame();
@@ -37,13 +42,16 @@ public class TwoPlayer {
         player2Validation();
 
         if(p1Total> p2Total)
-            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"\nPlayer Twos Total: "+p2Total+"\nPlayer One Wins");
+            result =( "Player Ones Score: "+p1Total+"\nPlayer Twos Total: "+p2Total+"\nPlayer One Wins");
 
         if(p1Total< p2Total)
-            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"\nPlayer Twos Total: "+p2Total+"\nPlayer Two Wins");
+             result =( "Player Ones Score: "+p1Total+"\nPlayer Twos Total: "+p2Total+"\nPlayer Two Wins");
 
         if(p1Total== p2Total)
-            JOptionPane.showMessageDialog(null, "Player Ones Score: "+p1Total+"\nPlayer Twos Total: "+p2Total+"\n Its a draw");
+            result = ("Player Ones score is " +p1Total+"\nPlayer Twos Score is "+ p2Total+"\n Its a draw");
+
+
+         JOptionPane.showMessageDialog(null, result);
 
     }
 
@@ -101,6 +109,7 @@ public class TwoPlayer {
         deck.add("Queen of Spades");
         deck.add("King of Spades");
         dispatch.add("Start");
+
 
 
 
@@ -388,7 +397,7 @@ public class TwoPlayer {
         player2Turn();
 
 
-    }// Main turn designation.
+    }// Knock_31.Main turn designation.
 
     public static void player1Validation(){
         player1ScoreValidation();
@@ -476,7 +485,7 @@ public class TwoPlayer {
 
 
     }// Validates player 1s hand for a total
-    public static void player1SuitValidation(){
+    public static  void player1SuitValidation(){
         int diamondTotal=0, heartTotal=0, spadeTotal=0, clubTotal=0;
 
         for(int i=0; i<3; i++){
