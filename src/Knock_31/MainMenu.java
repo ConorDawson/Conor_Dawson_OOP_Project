@@ -18,6 +18,7 @@ public class MainMenu extends JFrame{
     public MainMenu() {
         setContentPane(MainMenuPanel);
         setSize(1920,1080);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
 
@@ -30,9 +31,9 @@ public class MainMenu extends JFrame{
 
         });// One Player Mode of the Game
         p1VSP2Button.addActionListener((ActionEvent e) -> {
+            setVisible(false);
+            new Player1Info();
 
-             TwoPlayer.instructions();
-             Test.save1();
         });//Two Player Mode of the Game
 
         quitButton.addActionListener((ActionEvent e) -> System.exit(0));// Quits the game
@@ -40,6 +41,7 @@ public class MainMenu extends JFrame{
 
 
     public static void main(String[] args) {
-                 new MainMenu();
+
+        new MainMenu();
     }
 }

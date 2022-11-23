@@ -14,7 +14,7 @@ import java.util.Random;
 
      static int p2Turn=1, p2Total=0;
 
-     static String result;
+     static String result, name2 = Player2Info.P2Name;
 
 
 
@@ -43,13 +43,13 @@ import java.util.Random;
 
 
         if(P1.p1Total> p2Total)
-             result =( "Player Ones Score: "+P1.p1Total+"\nPlayer Twos Total: "+p2Total+"\nPlayer One Wins");
+             result =( P1.name1+"s Score: "+P1.p1Total+"\n"+name2+"s Total: "+p2Total+"\n"+P1.name1+"s Wins");
 
         if(P1.p1Total< p2Total)
-            result =( "Player Ones Score: "+P1.p1Total+"\nPlayer Twos Total: "+p2Total+"\nPlayer Two Wins");
+            result =( P1.name1+"s Score: " +P1.p1Total+"\n"+name2+"s Total: "+p2Total+"\n"+name2+"s Wins");
 
         if(P1.p1Total== p2Total)
-            result = ("Player Ones score is " +P1.p1Total+"\nPlayer Twos Score is "+ p2Total+"\n Its a draw");
+            result = (P1.name1+"s Score: "+P1.p1Total+"\n"+name2+"s Total: "+ p2Total+"\n Its a draw");
 
 
         JOptionPane.showMessageDialog(null, result);
@@ -93,7 +93,7 @@ import java.util.Random;
 
 
         int answer =JOptionPane.showOptionDialog(null,
-                "Player 2 Turn "+p2Turn+"\n Your hand is: "+p2Hand.get(0)+"   "+p2Hand.get(1)+"   "+p2Hand.get(2)+"\nWould you like to draw a card or Knock",
+                name2+"'s' 2 Turn "+p2Turn+"\n Your hand is: "+p2Hand.get(0)+"   "+p2Hand.get(1)+"   "+p2Hand.get(2)+"\nWould you like to draw a card or Knock",
                 "Player 2",
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.PLAIN_MESSAGE,

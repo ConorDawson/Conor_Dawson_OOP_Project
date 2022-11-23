@@ -13,6 +13,8 @@ public class P1 {
 
     static int p1Total=0, p1Turn=1, turn=1;
 
+    static String name1 = Player1Info.P1Name;
+
     public static void player1HandStart(){
         for(int i=0; i<3; i++){
             int rnd = new Random().nextInt(Deck.deck.size());//Chooses random card from deck
@@ -35,7 +37,7 @@ public class P1 {
 
 
         int answer = JOptionPane.showOptionDialog(null,
-                "Player 1 Turn "+p1Turn+"\n Your hand is: "+p1Hand.get(0)+"   "+p1Hand.get(1)+"   "+p1Hand.get(2)+"\nWould you like to draw a card or Knock",
+                name1+"'s Turn "+p1Turn+"\n Your hand is: "+p1Hand.get(0)+"   "+p1Hand.get(1)+"   "+p1Hand.get(2)+"\nWould you like to draw a card or Knock",
                 "Player 1",
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.PLAIN_MESSAGE,

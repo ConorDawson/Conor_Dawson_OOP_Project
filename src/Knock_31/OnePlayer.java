@@ -21,6 +21,8 @@ public class OnePlayer extends JFrame{
     static String result = " ";
 
 
+
+
     public static void main(String[] args) {
 
 
