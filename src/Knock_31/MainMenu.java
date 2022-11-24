@@ -2,8 +2,7 @@ package Knock_31;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-
-
+import java.awt.event.ActionListener;
 
 
 //Card got from https://opengameart.org/content/playing-cards
@@ -12,7 +11,7 @@ public class MainMenu extends JFrame{
     private JButton p1VSP2Button;
     private JButton quitButton;
     private JPanel MainMenuPanel;
-
+    private JButton leaderBoardButton;
 
 
     public MainMenu() {
@@ -31,12 +30,20 @@ public class MainMenu extends JFrame{
 
         });// One Player Mode of the Game
         p1VSP2Button.addActionListener((ActionEvent e) -> {
-            setVisible(false);
+
+
             new Player1Info();
 
         });//Two Player Mode of the Game
 
         quitButton.addActionListener((ActionEvent e) -> System.exit(0));// Quits the game
+        leaderBoardButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new LeaderBoard();
+            }
+        });
     }
 
 

@@ -19,13 +19,13 @@ public class ResultSave implements java.io.Serializable {
 
 
 class Test {
-    static String ResultSave=" ";
+    public static String ResultSave="Scores\n";
     public static void main(String[] args) {
 
     }
 
     public static void save1(){
-         ResultSave =  ResultSave+"\n\n\n"+TwoPlayer.result;
+       ResultSave =ResultSave +"\n\n\n"+TwoPlayer.result;
         String filename = "results.txt";
 
         // Serialization
@@ -40,7 +40,7 @@ class Test {
             out.close();
             file.close();
 
-            JOptionPane.showMessageDialog(null, ResultSave, "Results",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, getResultSave(), "Results",JOptionPane.INFORMATION_MESSAGE);
 
         } catch (IOException ex) {
             System.out.println("IOException is caught");
@@ -50,7 +50,7 @@ class Test {
     }
 
     public static void save2(){
-        ResultSave =  ResultSave+"\n\n\n"+OnePlayer.result;
+        ResultSave = ResultSave +"\n\n\n"+OnePlayer.result;
         String filename = "results.txt";
 
         // Serialization
@@ -65,7 +65,7 @@ class Test {
             out.close();
             file.close();
 
-            JOptionPane.showMessageDialog(null, ResultSave,"Results",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, getResultSave(),"Results",JOptionPane.INFORMATION_MESSAGE);
 
         } catch (IOException ex) {
             System.out.println("IOException is caught");
@@ -73,4 +73,10 @@ class Test {
 
 
     }
+
+    public static String getResultSave() {
+        return ResultSave;
+    }
+
+
 }

@@ -30,6 +30,7 @@ public class Player1Info extends JFrame {
             else{
                 setVisible(false);
                 new Player2Info();
+
             }
 
         });

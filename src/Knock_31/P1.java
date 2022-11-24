@@ -2,6 +2,7 @@ package Knock_31;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -13,7 +14,7 @@ public class P1 {
 
     static int p1Total=0, p1Turn=1, turn=1;
 
-    static String name1 = Player1Info.P1Name;
+    static String name1 = Player1Info.P1Name, card1, card2, card3;
 
     public static void player1HandStart(){
         for(int i=0; i<3; i++){
@@ -21,6 +22,7 @@ public class P1 {
             p1Hand.add(Deck.deck.get(rnd));//Adds to players hand
             Deck.deck.remove(rnd);//Removes selected card from available cards
         }
+         card1= P1.p1Hand.get(0); card2 = P1.p1Hand.get(1); card3= P1.p1Hand.get(2);
 
     }//Fills in player 1s hand while removing those cards from the deck
 

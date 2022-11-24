@@ -66,6 +66,7 @@ import java.util.Random;
         P1.turn=1;
         p2Turn=1;
 
+
     }//How the game is to run from the menu
 
 

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Knock_31.PlayerInterface">
+  <grid id="27dc6" binding="Board" layout-manager="GridLayoutManager" row-count="3" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="751" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-15777503"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="3e8b1" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Knock_31/card/back.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <vspacer id="7c390">
+        <constraints>
+          <grid row="1" column="0" row-span="2" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="932df" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Knock_31/card/back.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="c72aa" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Knock_31/card/back.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="d0fb3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Knock_31/card/base.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9d4f4" class="javax.swing.JButton" binding="Deck">
+        <constraints>
+          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="168"/>
+            <maximum-size width="120" height="168"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Segoe Script" size="16" style="3"/>
+          <horizontalTextPosition value="0"/>
+          <icon value="Knock_31/card/back.png"/>
+          <text value="Deck"/>
+        </properties>
+      </component>
+      <component id="8c309" class="javax.swing.JLabel" binding="Card1">
+        <constraints>
+          <grid row="1" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card1"/>
+        </properties>
+      </component>
+      <component id="1066f" class="javax.swing.JLabel" binding="Card2">
+        <constraints>
+          <grid row="1" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card2"/>
+        </properties>
+      </component>
+      <component id="58098" class="javax.swing.JLabel" binding="Card3">
+        <constraints>
+          <grid row="1" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Card3"/>
+        </properties>
+      </component>
+      <component id="5958f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Knock_31/card/base.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="f3de8" class="javax.swing.JButton" binding="dispatchPileButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Knock_31/card/base.png"/>
+          <text value="Dispatch Pile"/>
+        </properties>
+      </component>
+      <component id="2ccc3" class="javax.swing.JButton" binding="knockButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-560"/>
+          <foreground color="-16777216"/>
+          <text value="Knock"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
