@@ -21,6 +21,7 @@ public class Player2Info extends JFrame{
 
     /**
     A method that sets up the GUI for the user to input their name
+
      */
     Player2Info(){
         setContentPane(mainbody);
